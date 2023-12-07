@@ -9,87 +9,86 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MS Computational Science & Engineering
+      institution: Georgia Institute of Technology
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - GPA 4.0/4.0
+        - "Project: Improving the scalability of machine learning model serving in soft real-time systems"
+    - title: BS Physics
+      institution: University of Hong Kong
+      year: 2021
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 3.76/4.0
+        - "Thesis: Using maximum likelihood estimation to measure electron charge flip rate at the ATLAS detector"
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Data Science Intern
+      company: General Motors Financial
+      year: May 2023 - Aug 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Enhanced customer risk scoring model by implementing SMOTE oversampling technique, achieving 5% higher AUCROC.
+        - Conducted research to perform feature selection for customer scoring model with PySpark, XGBoost and SHAP.
+        - Effectively communicated research findings to both external model auditing groups and internal technical teams.
+
+    - title: Graduate Research Assistant
+      institution: Georgia Institue of Technology
+      year: Jan 2023 - Dec 2023
       description:
-        - Description 1.
-        - Description 2.
+        - Spearhead data engineering efforts for campus meter data infrastructure, encompassing approximately 10000 meters.
+        - Implement CI/CD and data pipelines utilizing Docker and Apache Airflow to streamline ETL processes.
+        - Lead team of 8 in development of dashboards in React and Flask, providing intuitive data visualizations to stakeholders.
+        - Assist in geospatial model development for simulating energy trends within Atlanta region using Postgres & PostGIS.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Full Stack Developer
+      company: Meta Air Labs Ltd.
+      year: Jun 2021 - Aug 2022
       description:
+        - Led team of 4 to design and build high-throughput cryptocurrency transaction systems with Kafka and Python on AWS, supporting a sustained load of 2,000 transactions per second.
+        - Planned and executed performance tests with JMeter to identify and address underlying system-wide bottlenecks.
+        - Utilized Grafana to create real-time dashboards, simplifying system monitoring and enhancing user insights.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Fintech Intern
+      company: Dah Sing Bank Ltd.
+      year: Jul 2019 - Jun 2020
+      description:
+        - Assisted in development of new E-Banking system using Java Spring Boot and Angular with Agile methodologies.
+        - Implemented CI/CD pipelines in Jenkins to automate release builds, enabling rapid software iterations.
+        - Undertook critical architectural tasks, including infrastructure design, firewall configuration and data migrations.
 
-- title: Open Source Projects
-  type: time_table
+- title: Skills
+  type: map
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - name: Machine Learning
+      value: Probability &amp; Statistics, Data Visualization, Model Serving, LLMs, Deep Learning
+    - name: Programming
+      value: Python, SQL, PyTorch, Scikit-learn, Numpy, Matplotlib, C++, NodeJS
+    - name: Platforms &amp; Applications
+      value: Linux, Docker, CI/CD, AWS, Spark, Kafka, REST API, SAS, Tableau, Git, Ray
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+# - title: Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Weightlifting, mountain-biking, reading
+
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items: 
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
+
