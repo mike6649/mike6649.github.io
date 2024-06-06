@@ -19,7 +19,9 @@ social: true  # includes social icons at the bottom of the page
 
 With a Masters degree in Computational Science & Engineering at Georgia Tech, I am excited to leverage my machine learning knowledge and software engineering background to create performant data-driven solutions.
 
-I am currently working at the [Aerospace Systems Design Laboratory](https://energywatch.gatech.edu/) to build data pipelines and deploy simulation models in production for buildings across Georgia Tech campus.
+I am curently working as a Data Scientist at General Motors Financial. During my time as a graduate research assistant at the [Aerospace Systems Design Laboratory](https://energywatch.gatech.edu/), I built data pipelines and deployed simulation models in production for buildings across the Georgia Tech campus.
+
+Before going to Georgia Tech, I obtained my undergraduate degree in Physics at the University of Hong Kong and gained work experience as a software engineer in the finance industry.
 
 My interests include scalable model inference, decentralized (federated) learning, and graph neural networks.
 

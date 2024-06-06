@@ -25,6 +25,13 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Data Scientist I
+      company: General Motors Financial
+      year: Apr 2024 - Present
+      description:
+        - Perform comprehensive data analyses to help stakeholders make data-informed business decisions.
+        - Facilitate transition of customer risk scoring models to LightGBM from traditional scorecards.
+
     - title: Data Science Intern
       company: General Motors Financial
       year: May 2023 - Aug 2023
@@ -68,27 +75,7 @@
     - name: Platforms &amp; Applications
       value: Linux, Docker, CI/CD, AWS, Spark, Kafka, REST API, SAS, Tableau, Git, Ray
 
-# - title: Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
 - title: Other Interests
   type: list
   contents:
     - <u>Hobbies:</u> Weightlifting, mountain-biking, reading
-
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items: 
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
-
