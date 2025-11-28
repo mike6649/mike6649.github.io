@@ -25,9 +25,17 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Data Scientist II
+      company: General Motors Financial
+      year: Sep 2025 - Present
+      description:
+        - Collaborate with business to understand company needs and translate into well-defined Data Science problems.
+        - Lead and enforce adoption of Git version control and good coding practices to facilitate team collaboration.
+        - Apply Propensity Score methods to improve accuracy of customer risk scoring models on rejected applications.
+        
     - title: Data Scientist I
       company: General Motors Financial
-      year: Apr 2024 - Present
+      year: Apr 2024 - Sep 2025
       description:
         - Perform comprehensive data analyses to help stakeholders make data-informed business decisions.
         - Facilitate transition of customer risk scoring models to LightGBM from traditional scorecards.
@@ -37,8 +45,7 @@
       year: May 2023 - Aug 2023
       description:
         - Enhanced customer risk scoring model by implementing SMOTE oversampling technique, achieving 5% higher AUCROC.
-        - Conducted research to perform feature selection for customer scoring model with PySpark, XGBoost and SHAP.
-        - Effectively communicated research findings to both external model auditing groups and internal technical teams.
+        - Performed feature selection for customer scoring model with PySpark, XGBoost and SHAP.
 
     - title: Graduate Research Assistant
       institution: Georgia Institue of Technology
@@ -47,7 +54,7 @@
         - Spearhead data engineering efforts for campus meter data infrastructure, encompassing approximately 10000 meters.
         - Implement CI/CD and data pipelines utilizing Docker and Apache Airflow to streamline ETL processes.
         - Lead team of 8 in development of dashboards in React and Flask, providing intuitive data visualizations to stakeholders.
-        - Assist in geospatial model development for simulating energy trends within Atlanta region using Postgres & PostGIS.
+        - Leverage Postgres & PostGIS to facilitate geospatial model development for simulating energy trends within Atlanta region.
 
     - title: Full Stack Developer
       company: Meta Air Labs Ltd.
@@ -78,4 +85,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Weightlifting, mountain-biking, reading
+    - <u>Hobbies:</u> Weightlifting, mountain-biking, working on my car, Autocross/HPDE
