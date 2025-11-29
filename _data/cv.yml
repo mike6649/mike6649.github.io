@@ -4,7 +4,7 @@
     - name: Full Name
       value: Ho Cheong Michael Tang
     - name: Languages
-      value: English, Chinese, German (basic)
+      value: English, Chinese, German
 
 - title: Education
   type: time_table
