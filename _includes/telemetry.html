@@ -1,0 +1,99 @@
+<div class="justify-content-sm-center">
+    <div id="player"></div>
+    <div>Time: <div id="timer">0</div></div>
+    <div>RPM: <div id="rpm">0</div></div>
+    <script src="{{ '/assets/js/papaparse.min.js' | relative_url | bust_file_cache }}"></script>
+
+    <script>
+        var timeOffsetMilli = {{ include.timeOffsetMilli }} / 1000;
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: '{{ include.videoId }}',
+                playerVars: {
+                    'playsinline': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+        }
+
+        var data;
+        var lapBoundaries;
+        Papa.parse(
+            '{{ include.telemPath | relative_url | bust_file_cache }}',
+            {
+                download: true,
+                comments: "#",
+                header: true,
+                dynamicTyping: true,
+                complete: function (results, file) {
+                    let curLap = 0;
+                    lapBoundaries = [0];
+                    for (let i = 0; i < results.data.length; i++) {
+                        if (results.data[i].Lap > curLap) {
+                            curLap++;
+                            lapBoundaries.push(i);
+                        }
+                    }
+                    data = results.data;
+                    console.info("Parsing complete:", JSON.stringify(data));
+                },
+                error: function (results, file) {
+                    console.error("Error:", results.toString(), file);
+                }
+            }
+        );
+
+        function findIndexInData(t) {
+            if (!data) {
+                return -1;
+            }
+            var start = 0;
+            var end = data.length - 1;
+
+            while (start <= end) {
+                let mid = Math.floor((start + end) / 2);
+                let time = data[mid].Time;
+                if (time == t) {
+                    return mid;
+                } else if (time < t) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+            return start;
+        }
+
+        function getLapTime(idx) {
+            return data[idx].Time - data[lapBoundaries[data[idx].Lap]].Time;
+        }
+
+        var interval = setInterval(() => {
+            if (data && player) {
+                let currentTime = player.getCurrentTime() + timeOffsetMilli;
+                let idx = findIndexInData(currentTime);
+                document.getElementById("timer").textContent = getLapTime(idx).toFixed(3);
+                document.getElementById("rpm").textContent = data[idx]["Engine Speed (RPM) *OBD"].toFixed(0);
+            };
+        }, 100);
+    </script>
+</div>
