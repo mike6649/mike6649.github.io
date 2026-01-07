@@ -259,6 +259,11 @@ ninja.data = [{
           description: "Energe usage patterns of the Kendeda Building on Georgia Tech campus",
           section: "Projects",handler: () => {
               window.location.href = "/projects/kb-eui/";
+            },},{id: "projects-tnia-msr-cresson",
+          title: 'TNIA MSR Cresson',
+          description: "2025 Sep 10 MSRC 1.7 CCW",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/new/";
             },},{id: "projects-powermap",
           title: 'PowerMap',
           description: "A tool to examine energy usage data for buildings in the US",
