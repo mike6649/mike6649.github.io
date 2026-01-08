@@ -1,7 +1,13 @@
-<div class="justify-content-sm-center">
-    <div id="player"></div>
-    <div>Time: <div id="timer">0</div></div>
-    <div>RPM: <div id="rpm">0</div></div>
+<div class="container justify-content-sm-center">
+    <div id="player" style="width: 90%"></div>
+    <div class="row">
+        <div class="col-sm">Time: </div> <div id="timer" class="col-sm">0</div> 
+        <div class="col-sm">RPM: </div> <div id="rpm" class="col-sm">0</div> 
+    </div>
+    <div class="row">
+        <div class="col-sm">Speed (MPH): </div> <div id="speed" class="col-sm">0</div> 
+        <div class="col-sm">Throttle: </div> <div id="throttle" class="col-sm">0</div> 
+    </div>
     <script src="{{ '/assets/js/papaparse.min.js' | relative_url | bust_file_cache }}"></script>
 
     <script>
@@ -15,8 +21,6 @@
         var player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
-                height: '390',
-                width: '640',
                 videoId: '{{ include.videoId }}',
                 playerVars: {
                     'playsinline': 1
@@ -93,6 +97,8 @@
                 let idx = findIndexInData(currentTime);
                 document.getElementById("timer").textContent = getLapTime(idx).toFixed(3);
                 document.getElementById("rpm").textContent = data[idx]["Engine Speed (RPM) *OBD"].toFixed(0);
+                document.getElementById("speed").textContent = data[idx]["Vehicle Speed (mph) *OBD"].toFixed(0);
+                document.getElementById("throttle").textContent = data[idx]["Throttle Position (%) *OBD"].toFixed(0);
             };
         }, 100);
     </script>
