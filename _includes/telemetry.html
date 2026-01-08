@@ -1,16 +1,18 @@
 <div class="container justify-content-sm-center">
     <div id="player" style="width: 90%"></div>
     <div class="row">
-        <div class="col-sm">Time: </div> <div id="timer" class="col-sm">0</div> 
-        <div class="col-sm">RPM: </div> <div id="rpm" class="col-sm">0</div> 
+        <div class="col-sm">Time: </div>
+        <div id="timer" class="col-sm">0</div>
+        <div class="col-sm">Lap: </div>
+        <div id="lap" class="col-sm">0</div>
     </div>
-    <div class="row">
-        <div class="col-sm">Speed (MPH): </div> <div id="speed" class="col-sm">0</div> 
-        <div class="col-sm">Throttle: </div> <div id="throttle" class="col-sm">0</div> 
-    </div>
+    <div class="echarts" id="speedchart"></div>
     <script src="{{ '/assets/js/papaparse.min.js' | relative_url | bust_file_cache }}"></script>
-
+    <script src="{{ site.third_party_libraries.echarts.url.js.library }}"
+        integrity="{{ site.third_party_libraries.echarts.integrity.js.library }}" crossorigin="anonymous"></script>
     <script>
+        const UPDATE_MILLI = 100;
+
         var timeOffsetMilli = {{ include.timeOffsetMilli }} / 1000;
         var tag = document.createElement('script');
 
@@ -26,17 +28,13 @@
                     'playsinline': 1
                 },
                 events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
+                    'onReady': onPlayerReady
                 }
             });
         }
 
         function onPlayerReady(event) {
             event.target.playVideo();
-        }
-
-        function onPlayerStateChange(event) {
         }
 
         var data;
@@ -48,16 +46,25 @@
                 comments: "#",
                 header: true,
                 dynamicTyping: true,
+                transformHeader: function (h) {
+                    if (h === "Vehicle Speed (mph) *OBD") {
+                        return "speed";
+                    }
+                    return h;
+                },
                 complete: function (results, file) {
                     let curLap = 0;
                     lapBoundaries = [0];
-                    for (let i = 0; i < results.data.length; i++) {
-                        if (results.data[i].Lap > curLap) {
+
+                    let tData = results.data.slice(0, results.data.length - 1);  // last data point is junk
+
+                    for (let i = 0; i < tData.length; i++) {
+                        if (tData[i].Lap > curLap) {
                             curLap++;
                             lapBoundaries.push(i);
                         }
                     }
-                    data = results.data;
+                    data = tData;
                     console.info("Parsing complete:", JSON.stringify(data));
                 },
                 error: function (results, file) {
@@ -66,12 +73,13 @@
             }
         );
 
-        function findIndexInData(t) {
-            if (!data) {
-                return -1;
+        function findIndexInData(t, start, end) {
+            if (t > data[end].Time && end !== data.length - 1) {
+                return findIndexInData(t, start, data.length - 1);
             }
-            var start = 0;
-            var end = data.length - 1;
+            if (t < data[start].Time && start !== 0) {
+                return findIndexInData(t, 0, end);
+            }
 
             while (start <= end) {
                 let mid = Math.floor((start + end) / 2);
@@ -84,22 +92,95 @@
                     end = mid - 1;
                 }
             }
-            return start;
+            return Math.min(start, data.length - 1);
         }
 
         function getLapTime(idx) {
             return data[idx].Time - data[lapBoundaries[data[idx].Lap]].Time;
         }
 
+        let chartElement = document.getElementById("speedchart")
+        if (globalThis.echartsTheme === "dark") {
+            var speedchart = echarts.init(chartElement, "dark-fresh-cut");
+        } else {
+            var speedchart = echarts.init(chartElement);
+        }
+
+        let currentTime = 0;
+        let idx = 0;
+        let lap = null;
+        let speedGraphData = null;
         var interval = setInterval(() => {
             if (data && player) {
-                let currentTime = player.getCurrentTime() + timeOffsetMilli;
-                let idx = findIndexInData(currentTime);
+                let _currentTime = player.getCurrentTime() + timeOffsetMilli;
+                if (_currentTime === currentTime) {
+                    return;
+                }
+                currentTime = _currentTime;
+                let _idx = findIndexInData(currentTime, idx, Math.min(idx + 15, data.length - 1));
+                if (_idx === idx) {
+                    return;
+                }
+                idx = _idx;
+                let _lap = data[idx].Lap;
+
                 document.getElementById("timer").textContent = getLapTime(idx).toFixed(3);
-                document.getElementById("rpm").textContent = data[idx]["Engine Speed (RPM) *OBD"].toFixed(0);
-                document.getElementById("speed").textContent = data[idx]["Vehicle Speed (mph) *OBD"].toFixed(0);
-                document.getElementById("throttle").textContent = data[idx]["Throttle Position (%) *OBD"].toFixed(0);
-            };
-        }, 100);
+                document.getElementById("lap").textContent = _lap;
+
+
+                if (_lap !== lap) {
+                    lap = _lap;
+                    let lapStartIdx = lapBoundaries[lap];
+                    let lapEndIdx = lap + 1 < lapBoundaries.length ? lapBoundaries[lap + 1] : data.length;
+                    let _data = data.slice(lapStartIdx, lapEndIdx).filter((x) => x.OBD_Update === 1);
+                    speedGraphData = _data.map((x) => [x.Time - data[lapBoundaries[lap]].Time, x["speed"]]);
+                }
+
+                // get interpolated speed
+                let interpSpeed;
+                let bIdx = idx;
+                let eIdx = idx;
+                while (bIdx > 0 && data[bIdx].OBD_Update !== 1) { bIdx-- }
+                while (eIdx < data.length - 1 && data[eIdx].OBD_Update !== 1) { eIdx++ }
+                if (bIdx == eIdx) {
+                    interpSpeed = data[idx].speed;
+                } else {
+                    interpSpeed = data[bIdx].speed + (data[idx].Time - data[bIdx].Time) * (data[eIdx].speed - data[bIdx].speed) / (data[eIdx].Time - data[bIdx].Time);
+                }
+
+                speedchart.setOption({
+                    animationEasing: 'quadraticOut',
+                    animationDurationUpdate: UPDATE_MILLI * 1.5,
+                    title: {
+                        text: 'Speed (MPH)'
+                    },
+                    xAxis: {
+                        name: 'Time (s)'
+                    },
+                    yAxis: {
+                        name: 'MPH'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    series: [
+                        {
+                            type: 'line',
+                            data: speedGraphData,
+                            showSymbol: false,
+                            markPoint: {
+                                data: [
+                                    { coord: [getLapTime(idx), interpSpeed] }
+                                ],
+                                symbol: 'circle',
+                                symbolSize: 15,
+                                animation: false,
+                            }
+                        }
+                    ]
+                });
+                ;
+            }
+        }, UPDATE_MILLI);
     </script>
 </div>

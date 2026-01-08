@@ -7,4 +7,4 @@ importance: 6
 category: fun
 ---
 
-{% include telemetry.html videoId="lY-tWAOWR38" telemPath="assets/csv/20250910.csv" timeOffsetMilli=300 %}
+{% include telemetry.html videoId="lY-tWAOWR38" telemPath="assets/csv/20250910.csv" timeOffsetMilli=200 %}
