@@ -424,13 +424,13 @@ third_party_libraries:
   echarts:
     integrity:
       js:
-        library: "sha256-QvgynZibb2U53SsVu98NggJXYqwRL7tg3FeyfXvPOUY="
+        library: "sha256-uqjf5+HZM2uY6Jhrp+IOoV582+oe9CpZ1ZR4Yy+kWh0="
         dark_theme: "sha256-sm6Ui9w41++ZCWmIWDLC18a6ki72FQpWDiYTDxEPXwU="
     url:
       js:
         library: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/echarts.min.js"
         dark_theme: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/theme/dark-fresh-cut.js"
-    version: "5.5.0"
+    version: "6.0.0"
   google_fonts:
     url:
       fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"

@@ -170,13 +170,19 @@ let setEchartsTheme = (theme) => {
     echarts.dispose(elem);
 
     if (theme === "dark") {
-      var chart = echarts.init(elem, "dark-fresh-cut");
+      var chart = echarts.init(elem, "dark");
     } else {
       var chart = echarts.init(elem);
     }
 
     chart.setOption(JSON.parse(jsonData));
   });
+
+  document.querySelectorAll(".echarts-raw").forEach((elem) => {
+    var chart = echarts.getInstanceByDom(elem);
+    chart.setTheme(theme === "dark" ? "dark": "default");
+    // chart.setOption(chart.getOption(), true);
+  })
 };
 
 let setPlotlyTheme = (theme) => {
