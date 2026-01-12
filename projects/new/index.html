@@ -1,350 +1,395 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> TNIA MSR Cresson | Michael Tang </title> <meta name="author" content="Michael Tang"> <meta name="description" content="2025 Sep 10 MSRC 1.7 CCW"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%88&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="/projects/new/"> <script src="/assets/js/theme.js?0e196f131814ac7fce0af9d1a1d7494a"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> TNIA MSR Cresson | Michael Tang </title> <meta name="author" content="Michael Tang"> <meta name="description" content="2025 Sep 10 MSRC 1.7 CCW"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%88&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="/projects/new/"> <script src="/assets/js/theme.js?80b99c2434f998242bcbd667e51b4bce"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Michael</span> Tang </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">Repositories </a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">TNIA MSR Cresson</h1> <p class="post-description">2025 Sep 10 MSRC 1.7 CCW</p> </header> <article> <div class="container justify-content-sm-center"> <div id="player" style="width: 90%; aspect-ratio: 16 / 9"></div> <div class="echarts-raw" id="speedchart" style="width: 90%; height: 400px"></div> <div class="echarts-raw" id="map" style="width: 50%; aspect-ratio: 1"></div> <div class="row"> <div class="col-sm">Time: </div> <div id="timer" class="col-sm">0</div> <div class="col-sm">Lap: </div> <div id="lap" class="col-sm">0</div> </div> <script src="/assets/js/papaparse.min.js?5cd35de0c36df265580eec1b2236f652"></script> <script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js" integrity="sha256-uqjf5+HZM2uY6Jhrp+IOoV582+oe9CpZ1ZR4Yy+kWh0=" crossorigin="anonymous"></script> <script>
-        const UPDATE_MILLI = 40;
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Michael</span> Tang </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">Repositories </a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">TNIA MSR Cresson</h1> <p class="post-description">2025 Sep 10 MSRC 1.7 CCW</p> </header> <article> <div class="container justify-content-sm-center"> <div id="player" style="width: 90%; aspect-ratio: 16 / 9"></div> <div class="echarts-raw" id="speedchart" style="width: 90%; height: 400px"></div> <div class="echarts-raw" id="map" style="width: 50%; aspect-ratio: 1"></div> <div class="row"> <div class="col-sm">Time: </div> <div id="timer" class="col-sm">0</div> <div class="col-sm">Lap: </div> <div id="lap" class="col-sm">0</div> </div> </div> <script src="/assets/js/papaparse.min.js?5cd35de0c36df265580eec1b2236f652"></script> <script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js" integrity="sha256-uqjf5+HZM2uY6Jhrp+IOoV582+oe9CpZ1ZR4Yy+kWh0=" crossorigin="anonymous"></script> <script>
+    const UPDATE_MILLI = 100;
 
-        var timeOffsetMilli = 200 / 1000;
-        var tag = document.createElement('script');
+    var timeOffsetMilli = 200 / 1000;
+    var tag = document.createElement('script');
 
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'lY-tWAOWR38',
-                playerVars: {
-                    'playsinline': 1
-                },
-                events: {
-                    'onReady': (event) => { event.target.playVideo() }
+    var player;
+    var playerReady = false;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            videoId: 'lY-tWAOWR38',
+            playerVars: {
+                'playsinline': 1
+            },
+            events: {
+                'onReady': (event) => { playerReady = true }
+            }
+        });
+    }
+
+    var data;
+    var lapBoundaries = [0];
+    var gpsUpdate = [0];
+    var obdUpdate = [0];
+    var bestPathLap, bestPathLapMap;
+
+    var radians = (d) => d * Math.PI / 180;
+
+    const e2 = 8.18e-2;
+    const a = 6378137;
+    function latLongToEcef(lat, long, h) {
+        lat = radians(lat);
+        long = radians(long);
+
+        let n = a / Math.sqrt(1 - e2 ** 2 * Math.sin(lat) ** 2);
+        let x = (h + n) * Math.cos(lat) * Math.cos(long);
+        let y = (h + n) * Math.cos(lat) * Math.sin(long);
+        let z = (h + (1 - e2 ** 2) * n) * Math.sin(lat);
+        return [x, y, z];
+    }
+
+    function ecefToLtp(x, y, z, x0, y0, z0, lat, long) {
+        let lam = radians(lat);
+        let phi = radians(long);
+        x = x - x0;
+        y = y - y0;
+        z = z - z0;
+
+        let e = -Math.sin(phi) * x + Math.cos(phi) * y;
+        let n = -Math.cos(phi) * Math.sin(lam) * x - Math.sin(lam) * Math.sin(phi) * y + Math.cos(lam) * z;
+        let u = Math.cos(lam) * Math.cos(phi) * x + Math.cos(lam) * Math.sin(phi) * y + Math.sin(lam) * z;
+        return [e, n, u];
+    }
+
+    var distance = (a, b) => Math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2);
+
+    function frechetMatrix(p, q) {
+        let m = p.length;
+        let n = q.length;
+        let C = new Array(m);
+        for (let i = 0; i < m; i++) {
+            C[i] = new Array(n);
+            for (let j = 0; j < n; j++) {
+                let dij = distance(p[i], q[j]);
+                if (i == 0 && j == 0) {
+                    C[i][j] = dij;
+                } else if (i == 0) {
+                    C[i][j] = Math.max(dij, C[i][j - 1]);
+                } else if (j == 0) {
+                    C[i][j] = Math.max(dij, C[i - 1][j]);
+                } else {
+                    C[i][j] = Math.max(
+                        dij,
+                        Math.min(C[i][j - 1], C[i - 1][j], C[i - 1][j - 1])
+                    );
                 }
+            }
+        }
+        return C;
+    }
+
+    var frechetDistance = (p, q) => frechetMatrix(p, q)[p.length - 1][q.length - 1];
+
+    function frechetMatch(p, q) {
+        let C = frechetMatrix(p, q);
+        // return: array of size p, which maps to indices in q
+        let m = p.length;
+        let n = q.length;
+        // get the path starting from C[m-1][n-1]
+        let i = m - 1;
+        let j = n - 1;
+        let path = [];
+        while (i > 0 || j > 0) {
+            path.push([i, j]);
+            let a = i > 0 && j > 0 ? C[i - 1][j - 1] : Infinity;
+            let b = i > 0 ? C[i - 1][j] : Infinity;
+            let c = j > 0 ? C[i][j - 1] : Infinity;
+            if (a <= b && a <= c) {
+                i--;
+                j--;
+            } else if (b <= a && b <= c) {
+                i--;
+            } else j--;
+        }
+        path.push([0, 0]);
+        path.reverse();
+
+        let a = [];
+        for (let idx = 0; idx < path.length; i++) {
+            [i, j] = path[idx];
+            if (a.length === i) {
+                a.push([]);
+            }
+            a.at(i).push(j);
+        }
+        return a;
+    }
+
+    function processData(results, file) {
+        let tData = results.data.slice(0, results.data.length - 1);  // last data point is junk
+        let x;
+        let refCoord = latLongToEcef(tData[0].Latitude, tData[0].Longitude, tData[0]["Altitude (m)"]);
+
+        for (let i = 0; i < tData.length; i++) {
+            x = tData[i];
+            if (x.Lap >= lapBoundaries.length) {
+                lapBoundaries.push(i);
+            }
+            if (x.OBD_Update === 1 && i > 0) {
+                obdUpdate.push(i);
+            }
+            if (x.GPS_Update === 1 && i > 0) {
+                gpsUpdate.push(i);
+            }
+
+            let c = latLongToEcef(x.Latitude, x.Longitude, x["Altitude (m)"]);
+            tData[i].coords = ecefToLtp(...c, ...refCoord, x.Latitude, x.Longitude);
+        }
+        obdUpdate.push(tData.length - 1);
+        gpsUpdate.push(tData.length - 1);
+
+        let obdIdx = 1;
+        let gpsIdx = 1;
+        let t1, t0, y1, y0, i1, i0;
+        for (let i = 0; i < tData.length; i++) {
+            x = tData[i];
+            t = x.Time;
+            // interpolate speed
+            if (i >= obdUpdate[obdIdx]) {
+                obdIdx++;
+            } else {
+                i1 = obdUpdate[obdIdx];
+                i0 = obdUpdate[obdIdx - 1];
+
+                t1 = tData[i1].Time;
+                t0 = tData[i0].Time;
+                y1 = tData[i1].speed;
+                y0 = tData[i0].speed;
+                x.speed = y0 + (t - t0) * (y1 - y0) / (t1 - t0);
+            }
+
+            // interpolate gps
+            if (i >= gpsUpdate[gpsIdx]) {
+                gpsIdx++;
+            } else {
+                i1 = gpsUpdate[gpsIdx];
+                i0 = gpsUpdate[gpsIdx - 1];
+
+                t1 = tData[i1].Time;
+                t0 = tData[i0].Time;
+                y1 = tData[i1].coords;
+                y0 = tData[i0].coords;
+                for (let j = 0; j < 3; j++) {
+                    x.coords[j] = y0[j] + (t - t0) * (y1[j] - y0[j]) / (t1 - t0);
+                }
+            }
+
+        }
+
+        // find lap with best path
+        let lapPaths = [];
+        let lapCount = lapBoundaries.length;
+        for (let i = 0; i < lapCount; i++) {
+            let lapStartIdx = lapBoundaries[i];
+            let lapEndIdx = i + 1 < lapCount ? lapBoundaries[i + 1] : tData.length;
+            let tMapData = tData.slice(lapStartIdx, lapEndIdx).filter((x) => x.GPS_Update === 1).map((x) => [x.coords[0], x.coords[1]]);
+            if (i > 0 && i < lapCount - 1) {
+                tMapData.push(tMapData[0]);
+            }
+            lapPaths.push(tMapData);
+        }
+
+        let M = new Array(lapCount);
+        for (let i = 0; i < lapCount; i++) {
+            M[i] = new Array(lapCount);
+        }
+        for (let i = 0; i < lapCount; i++) {
+            for (let j = i; j < lapCount; j++) {
+                if (j == i) {
+                    M[i][j] = 0;
+                }
+                M[i][j] = frechetDistance(lapPaths[i], lapPaths[j]);
+                M[j][i] = M[i][j];
+            }
+        }
+
+        let avgDist = M.map((m) => m.reduce((sum, d) => sum + d) / (lapCount - 1));
+        bestPathLap = 0;
+        for (let i = 0; i < lapCount; i++) {
+            if (avgDist[bestPathLap] > avgDist[i]) {
+                bestPathLap = i;
+            }
+        }
+
+        bestPathLapMap = lapPaths[bestPathLap];
+
+        data = tData;
+        // console.info("Parsing complete:", JSON.stringify(data));
+    }
+
+    Papa.parse(
+        '/assets/csv/20250910.csv?239e8589b9b8f5be61cdaa3461cb5811',
+        {
+            download: true,
+            comments: "#",
+            header: true,
+            dynamicTyping: true,
+            transformHeader: function (h) {
+                if (h === "Vehicle Speed (mph) *OBD") {
+                    return "speed";
+                }
+                return h;
+            },
+            complete: function (results, file) {
+                processData(results, file);
+            },
+            error: function (results, file) {
+                console.error("Error:", results.toString(), file);
+            }
+        }
+    );
+
+    function findIndexInData(t, start, end) {
+        if (t > data[end].Time && end !== data.length - 1) {
+            return findIndexInData(t, start, data.length - 1);
+        }
+        if (t < data[start].Time && start !== 0) {
+            return findIndexInData(t, 0, end);
+        }
+
+        while (start <= end) {
+            let mid = Math.floor((start + end) / 2);
+            let time = data[mid].Time;
+            if (time == t) {
+                return mid;
+            } else if (time < t) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return Math.min(start, data.length - 1);
+    }
+
+    var getLapTime = (idx) => data[idx].Time - data[lapBoundaries[data[idx].Lap]].Time;
+
+    let chartElement = document.getElementById("speedchart");
+    let mapchartElement = document.getElementById("map");
+    var speedchart, mapchart;
+    var themeSetting = determineThemeSetting();
+    if (themeSetting === "dark") {
+        speedchart = echarts.init(chartElement, "dark");
+        mapchart = echarts.init(mapchartElement, "dark");
+    } else {
+        speedchart = echarts.init(chartElement);
+        mapchart = echarts.init(mapchartElement);
+    }
+
+    window.addEventListener('resize', function () {
+        speedchart.resize();
+        mapchart.resize();
+    });
+
+    let currentTime = 0;
+    let idx = 0;
+    let lap = null;
+    let speedGraphData = null;
+
+    setInterval(() => {
+        if (data && playerReady) {
+            let _currentTime = player.getCurrentTime() + timeOffsetMilli;
+            if (_currentTime === currentTime) {
+                return;
+            }
+            currentTime = _currentTime;
+            let _idx = findIndexInData(currentTime, idx, Math.min(idx + 15, data.length - 1));
+            if (_idx === idx) {
+                return;
+            }
+            idx = _idx;
+            let _lap = data[idx].Lap;
+
+            document.getElementById("timer").textContent = getLapTime(idx).toFixed(3);
+            document.getElementById("lap").textContent = _lap;
+
+            if (_lap !== lap) {
+                lap = _lap;
+                let lapStartIdx = lapBoundaries[lap];
+                let lapEndIdx = lap + 1 < lapBoundaries.length ? lapBoundaries[lap + 1] : data.length;
+                let tData = data.slice(lapStartIdx, lapEndIdx);
+                let obdData = tData.filter((x) => x.OBD_Update === 1);
+                let gpsData = tData.filter((x) => x.GPS_Update === 1);
+                speedGraphData = obdData.map((x) => [x.Time - data[lapBoundaries[lap]].Time, x["speed"]]);
+            }
+
+            speedchart.setOption({
+                animationEasing: 'quadraticOut',
+                animationDurationUpdate: UPDATE_MILLI * 1.5,
+                title: {
+                    text: 'Speed (MPH)'
+                },
+                xAxis: {
+                    name: 'Time (s)'
+                },
+                yAxis: {
+                    name: 'MPH'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                series: [
+                    {
+                        type: 'line',
+                        data: speedGraphData,
+                        showSymbol: false,
+                        markPoint: {
+                            data: [
+                                { coord: [getLapTime(idx), data[idx].speed] }
+                            ],
+                            symbol: 'circle',
+                            symbolSize: 15,
+                            animation: false,
+                        },
+                        markLine: {
+                            symbol: 'none',
+                            data: [
+                                { xAxis: getLapTime(idx) }
+                            ]
+                        }
+                    }
+                ]
+            });
+
+            mapchart.setOption({
+                grid: {
+                    width: '100%',
+                    height: '100%'
+                },
+                animation: false,
+                xAxis: {
+                    type: 'value',
+                    scale: true,
+                    show: false
+                },
+                yAxis: {
+                    type: 'value',
+                    scale: true,
+                    show: false
+                },
+                series: [
+                    {
+                        type: 'line',
+                        data: bestPathLapMap,
+                        showSymbol: false,
+                        smooth: true,
+                        markPoint: {
+                            data: [
+                                { coord: [data[idx].coords[0], data[idx].coords[1]] }
+                            ],
+                            symbol: 'circle',
+                            symbolSize: 15,
+                            animation: false,
+                        },
+                    }
+                ]
             });
         }
-
-        var data;
-        var lapBoundaries = [0];
-        var gpsUpdate = [0];
-        var obdUpdate = [0];
-        var bestPathLap;
-        let bestPathLapMap;
-
-        var radians = (d) => d * Math.PI / 180;
-
-        const e2 = 8.18e-2;
-        const a = 6378137;
-        function latLongToEcef(lat, long, h) {
-            lat = radians(lat);
-            long = radians(long);
-
-            let n = a / Math.sqrt(1 - e2 ** 2 * Math.sin(lat) ** 2);
-            let x = (h + n) * Math.cos(lat) * Math.cos(long);
-            let y = (h + n) * Math.cos(lat) * Math.sin(long);
-            let z = (h + (1 - e2 ** 2) * n) * Math.sin(lat);
-            return [x, y, z];
-        }
-
-        function ecefToLtp(x, y, z, x0, y0, z0, lat, long) {
-            let lam = radians(lat);
-            let phi = radians(long);
-            x = x - x0;
-            y = y - y0;
-            z = z - z0;
-
-            let e = -Math.sin(phi) * x + Math.cos(phi) * y;
-            let n = -Math.cos(phi) * Math.sin(lam) * x - Math.sin(lam) * Math.sin(phi) * y + Math.cos(lam) * z;
-            let u = Math.cos(lam) * Math.cos(phi) * x + Math.cos(lam) * Math.sin(phi) * y + Math.sin(lam) * z;
-            return [e, n, u];
-        }
-
-        var distance = (a, b) => Math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2);
-
-        function frechetDistance(p, q) {
-            let m = p.length;
-            let n = q.length;
-            let C = new Array(m);
-            for (let i = 0; i < m; i++) {
-                C[i] = new Array(n);
-                for (let j = 0; j < n; j++) {
-                    let dij = distance(p[i], q[j]);
-                    if (i == 0 && j == 0) {
-                        C[i][j] = dij;
-                    } else if (i == 0) {
-                        C[i][j] = Math.max(dij, C[i][j - 1]);
-                    } else if (j == 0) {
-                        C[i][j] = Math.max(dij, C[i - 1][j]);
-                    } else {
-                        C[i][j] = Math.max(
-                            dij,
-                            Math.min(C[i][j - 1], C[i - 1][j], C[i - 1][j - 1])
-                        );
-                    }
-                }
-            }
-            return C[m - 1][n - 1];
-        }
-
-        function processData(results, file) {
-            let tData = results.data.slice(0, results.data.length - 1);  // last data point is junk
-            let x;
-            let refCoord = latLongToEcef(tData[0].Latitude, tData[0].Longitude, tData[0]["Altitude (m)"]);
-
-            for (let i = 0; i < tData.length; i++) {
-                x = tData[i];
-                if (x.Lap >= lapBoundaries.length) {
-                    lapBoundaries.push(i);
-                }
-                if (x.OBD_Update === 1 && i > 0) {
-                    obdUpdate.push(i);
-                }
-                if (x.GPS_Update === 1 && i > 0) {
-                    gpsUpdate.push(i);
-                }
-
-                let c = latLongToEcef(x.Latitude, x.Longitude, x["Altitude (m)"]);
-                tData[i].coords = ecefToLtp(...c, ...refCoord, x.Latitude, x.Longitude);
-            }
-            obdUpdate.push(tData.length - 1);
-            gpsUpdate.push(tData.length - 1);
-
-            let obdIdx = 1;
-            let gpsIdx = 1;
-            let t1, t0, y1, y0, i1, i0;
-            for (let i = 0; i < tData.length; i++) {
-                x = tData[i];
-                t = x.Time;
-                // interpolate speed
-                if (i >= obdUpdate[obdIdx]) {
-                    obdIdx++;
-                } else {
-                    i1 = obdUpdate[obdIdx];
-                    i0 = obdUpdate[obdIdx - 1];
-
-                    t1 = tData[i1].Time;
-                    t0 = tData[i0].Time;
-                    y1 = tData[i1].speed;
-                    y0 = tData[i0].speed;
-                    x.speed = y0 + (t - t0) * (y1 - y0) / (t1 - t0);
-                }
-
-                // interpolate gps
-                if (i >= gpsUpdate[gpsIdx]) {
-                    gpsIdx++;
-                } else {
-                    i1 = gpsUpdate[gpsIdx];
-                    i0 = gpsUpdate[gpsIdx - 1];
-
-                    t1 = tData[i1].Time;
-                    t0 = tData[i0].Time;
-                    y1 = tData[i1].coords;
-                    y0 = tData[i0].coords;
-                    for (let j = 0; j < 3; j++) {
-                        x.coords[j] = y0[j] + (t - t0) * (y1[j] - y0[j]) / (t1 - t0);
-                    }
-                }
-
-            }
-
-            // find lap with best path
-            let lapPaths = [];
-            let lapCount = lapBoundaries.length;
-            for (let i = 0; i < lapCount; i++) {
-                let lapStartIdx = lapBoundaries[i];
-                let lapEndIdx = i + 1 < lapCount ? lapBoundaries[i + 1] : tData.length;
-                let tMapData = tData.slice(lapStartIdx, lapEndIdx).filter((x) => x.GPS_Update === 1).map((x) => [x.coords[0], x.coords[1]]);
-                if (i > 0 && i < lapCount - 1) {
-                    tMapData.push(tMapData[0]);
-                }
-                lapPaths.push(tMapData);
-            }
-
-            let M = new Array(lapCount);
-            for (let i = 0; i < lapCount; i++) {
-                M[i] = new Array(lapCount);
-            }
-            for (let i = 0; i < lapCount; i++) {
-                for (let j = i; j < lapCount; j++) {
-                    if (j == i) {
-                        M[i][j] = 0;
-                    }
-                    M[i][j] = frechetDistance(lapPaths[i], lapPaths[j]);
-                    M[j][i] = M[i][j];
-                }
-            }
-
-            let avgDist = M.map((m) => m.reduce((sum, d) => sum + d) / (lapCount - 1));
-            bestPathLap = 0;
-            for (let i = 0; i < lapCount; i++) {
-                if (avgDist[bestPathLap] > avgDist[i]) {
-                    bestPathLap = i;
-                }
-            }
-
-            bestPathLapMap = lapPaths[bestPathLap];
-
-            data = tData;
-            console.info("Parsing complete:", JSON.stringify(data));
-        }
-
-        Papa.parse(
-            '/assets/csv/20250910.csv?239e8589b9b8f5be61cdaa3461cb5811',
-            {
-                download: true,
-                comments: "#",
-                header: true,
-                dynamicTyping: true,
-                transformHeader: function (h) {
-                    if (h === "Vehicle Speed (mph) *OBD") {
-                        return "speed";
-                    }
-                    return h;
-                },
-                complete: function (results, file) {
-                    processData(results, file);
-                },
-                error: function (results, file) {
-                    console.error("Error:", results.toString(), file);
-                }
-            }
-        );
-
-        function findIndexInData(t, start, end) {
-            if (t > data[end].Time && end !== data.length - 1) {
-                return findIndexInData(t, start, data.length - 1);
-            }
-            if (t < data[start].Time && start !== 0) {
-                return findIndexInData(t, 0, end);
-            }
-
-            while (start <= end) {
-                let mid = Math.floor((start + end) / 2);
-                let time = data[mid].Time;
-                if (time == t) {
-                    return mid;
-                } else if (time < t) {
-                    start = mid + 1;
-                } else {
-                    end = mid - 1;
-                }
-            }
-            return Math.min(start, data.length - 1);
-        }
-
-        var getLapTime = (idx) => data[idx].Time - data[lapBoundaries[data[idx].Lap]].Time;
-
-        let chartElement = document.getElementById("speedchart");
-        let mapchartElement = document.getElementById("map");
-        var speedchart, mapchart;
-        var themeSetting = determineThemeSetting();
-        if (themeSetting === "dark") {
-            speedchart = echarts.init(chartElement, "dark");
-            mapchart = echarts.init(mapchartElement, "dark");
-        } else {
-            speedchart = echarts.init(chartElement);
-            mapchart = echarts.init(mapchartElement);
-        }
-
-        let currentTime = 0;
-        let idx = 0;
-        let lap = null;
-        let speedGraphData = null;
-        
-        var interval = setInterval(() => {
-            if (data && player) {
-                let _currentTime = player.getCurrentTime() + timeOffsetMilli;
-                // if (_currentTime === currentTime) {
-                //     return;
-                // }
-                currentTime = _currentTime;
-                let _idx = findIndexInData(currentTime, idx, Math.min(idx + 15, data.length - 1));
-                // if (_idx === idx) {
-                //     return;
-                // }
-                idx = _idx;
-                let _lap = data[idx].Lap;
-
-                document.getElementById("timer").textContent = getLapTime(idx).toFixed(3);
-                document.getElementById("lap").textContent = _lap;
-
-                if (_lap !== lap) {
-                    lap = _lap;
-                    let lapStartIdx = lapBoundaries[lap];
-                    let lapEndIdx = lap + 1 < lapBoundaries.length ? lapBoundaries[lap + 1] : data.length;
-                    let tData = data.slice(lapStartIdx, lapEndIdx);
-                    let obdData = tData.filter((x) => x.OBD_Update === 1);
-                    let gpsData = tData.filter((x) => x.GPS_Update === 1);
-                    speedGraphData = obdData.map((x) => [x.Time - data[lapBoundaries[lap]].Time, x["speed"]]);
-                }
-
-                speedchart.setOption({
-                    animationEasing: 'quadraticOut',
-                    animationDurationUpdate: UPDATE_MILLI * 1.5,
-                    title: {
-                        text: 'Speed (MPH)'
-                    },
-                    xAxis: {
-                        name: 'Time (s)'
-                    },
-                    yAxis: {
-                        name: 'MPH'
-                    },
-                    tooltip: {
-                        trigger: 'axis'
-                    },
-                    series: [
-                        {
-                            type: 'line',
-                            data: speedGraphData,
-                            showSymbol: false,
-                            markPoint: {
-                                data: [
-                                    { coord: [getLapTime(idx), data[idx].speed] }
-                                ],
-                                symbol: 'circle',
-                                symbolSize: 15,
-                                animation: false,
-                            },
-                            markLine: {
-                                symbol: 'none',
-                                data: [
-                                    { xAxis: getLapTime(idx) }
-                                ]
-                            }
-                        }
-                    ]
-                });
-
-                mapchart.setOption({
-                    animation: false,
-                    xAxis: {
-                        type: 'value',
-                        scale: true,
-                        show: false
-                    },
-                    yAxis: {
-                        type: 'value',
-                        scale: true,
-                        show: false
-                    },
-                    series: [
-                        {
-                            type: 'line',
-                            data: bestPathLapMap,
-                            showSymbol: false,
-                            smooth: true,
-                            markPoint: {
-                                data: [
-                                    { coord: [data[idx].coords[0], data[idx].coords[1]] }
-                                ],
-                                symbol: 'circle',
-                                symbolSize: 15,
-                                animation: false,
-                            },
-                        }
-                    ]
-                })
-                    ;
-            }
-        }, UPDATE_MILLI);
-    </script> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Michael Tang. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> </body> </html>
+    }, UPDATE_MILLI);
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Michael Tang. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> </body> </html>
