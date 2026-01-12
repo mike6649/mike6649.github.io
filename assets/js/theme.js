@@ -181,7 +181,6 @@ let setEchartsTheme = (theme) => {
   document.querySelectorAll(".echarts-raw").forEach((elem) => {
     var chart = echarts.getInstanceByDom(elem);
     chart.setTheme(theme === "dark" ? "dark": "default");
-    // chart.setOption(chart.getOption(), true);
   })
 };
 
